@@ -1,0 +1,333 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Pertokoan;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.Scanner;
+/**
+ *
+ * @author Najma Choirun Nisa
+ */
+public class appToko {
+ public static void main(String args[]) {
+       Scanner scan = new Scanner(System.in);
+     //1. kasir --> pemesanan makanan
+     //2. admin --> penambahan menu
+     //3. owner --> pencatatan 
+         int user = 0;
+     //Main Data
+        String Barang[] = new String[10];
+        int Kode[] = new int[10];
+        int Harga[] = new int[10];
+        int Jumlah = 10;
+        Barang[0] = "Coffee Latte"; Kode[0] = 2001; Harga[0] = 10000;
+        Barang[1] = "Croissant"; Kode[1] = 2002; Harga[1] = 5000;
+        Barang[2] = "Vanilla Ice Cream"; Kode[2] = 2003; Harga[2] = 6000;
+        Barang[3] = "Ice Cream w. Jasmine Tea"; Kode[3] = 2004; Harga[3] = 13000;
+        Barang[4] = "Pudding Coklat"; Kode[4] = 2005; Harga[4] = 5000;
+	Barang[5] = "Americano"; Kode[5] = 2006; Harga[5] = 8000;
+        Barang[6] = "Brownies"; Kode[6] = 2007; Harga[6] = 7000;
+        Barang[7] = "chocolate Ice Cream"; Kode[7] = 2008; Harga[7] = 6000;
+        Barang[8] = "Ice Cream roll"; Kode[8] = 2009; Harga[8] = 13000;
+        Barang[9] = "Pudding vanilla"; Kode[9] = 2010; Harga[9] = 5000;
+        
+     do{
+         System.out.println("Silahkan Pilih Fitur!");
+         System.out.println("1.kasir");
+         System.out.println("2.admin");
+         System.out.println("3.owner");
+         System.out.println("4.exit");
+         System.out.print("Pilih = ");
+         user = scan.nextInt();
+    switch (user) {
+             case 1:
+                 System.out.println(".            DAFTAR MENU               ");
+                 System.out.println("Selamat Datang, Mau Pesan Apa Hari Ini?");
+                 System.out.println("                                       ");
+                 System.out.println("                                       ");
+                 System.out.println("1. Coffee Latte................Rp 10000");
+                 System.out.println("2. Croissant....................Rp 5000");
+                 System.out.println("3. Vanilla Ice Cream............Rp 6000");
+                 System.out.println("4. Ice Cream w. Jasmine Tea....Rp 13000");
+                 System.out.println("5. Pudding Coklat...............Rp 5000");
+		 System.out.println("6. Americano....................Rp 8000");
+                 System.out.println("7. Brownies.....................Rp 7000");
+                 System.out.println("8. Chocolate Ice Cream..........Rp 6000");
+                 System.out.println("9. Ice Cream Rol...............Rp 13000");
+                 System.out.println("10. Pudding Vanilla.............Rp 5000");
+                 System.out.println("                                       ");
+                 
+        int harga = 0;
+        int harga_menu[] = {10000, 5000, 6000, 13000, 5000};
+        String menu;
+        int harganya;
+        int uang;
+
+        for (String i = "Y"; i.equals("Y")||i.equals("y"); )
+        {
+        System.out.println("_____________________________________");
+        System.out.print("Masukkan Nomor Pesanan : ");
+        int input_menu = scan.nextInt();
+        System.out.print("Masukkan Banyak Pesanan : ");
+        int jumlah = scan.nextInt();
+        System.out.println("_____________________________________");
+
+        if (input_menu == 1)
+        {
+            menu = " Coffee Latte";
+            harga = harga + harga_menu[0] * jumlah;
+            harganya= harga_menu[0] * jumlah;
+            System.out.println("Menu Pesanan Anda : " + menu +"    x"+ jumlah+"   |  Rp. "+ harganya);
+            
+        }
+            else if (input_menu == 2)
+            {
+                menu = " Croissant";
+                harga = harga + harga_menu[1] * jumlah;
+                harganya= harga_menu[1] * jumlah;
+             System.out.println("Menu Pesanan Anda : " + menu +"    x"+ jumlah+"   |  Rp. "+ harganya);
+            }
+                else if (input_menu == 3)
+                {
+                    menu = " Vanilla Ice Cream";
+                    harga = harga + harga_menu[2] * jumlah;
+                    harganya= harga_menu[2] * jumlah;
+                 System.out.println("Menu Pesanan Anda : " + menu +"    x"+ jumlah+"   |  Rp. "+ harganya);
+                }
+                    else if (input_menu == 4)
+                    {
+                        menu = " Ice Cream w. Jasmine Tea";
+                        harga = harga + harga_menu[3] * jumlah;
+                        harganya= harga_menu[3] * jumlah;
+                        System.out.println("Menu Pesanan Anda : " + menu +"    x"+ jumlah+"   |  Rp. "+ harganya);
+                    }
+                        else if (input_menu == 5)
+                        {
+                            menu = " Pudding Coklats";
+                            harga = harga + harga_menu[4] * jumlah;
+                            harganya= harga_menu[4] * jumlah;
+                 System.out.println("Menu Pesanan Anda : " + menu +"    x"+ jumlah+"   |  Rp. "+ harganya);
+                        }
+
+                        else if (input_menu == 6)
+                        {
+                            menu = " Americano";
+                            harga = harga + harga_menu[5] * jumlah;
+                            harganya= harga_menu[5] * jumlah;
+                 System.out.println("Menu Pesanan Anda : " + menu +"    x"+ jumlah+"   |  Rp. "+ harganya);
+                        }
+                        else if (input_menu == 7)
+                        {
+                            menu = " Brownies";
+                            harga = harga + harga_menu[6] * jumlah;
+                            harganya= harga_menu[6] * jumlah;
+                 System.out.println("Menu Pesanan Anda : " + menu +"    x"+ jumlah+"   |  Rp. "+ harganya);
+                        }
+                        else if (input_menu == 8)
+                        {
+                            menu = " Chocolate Ice Cream";
+                            harga = harga + harga_menu[7] * jumlah;
+                            harganya= harga_menu[7] * jumlah;
+                 System.out.println("Menu Pesanan Anda : " + menu +"    x"+ jumlah+"   |  Rp. "+ harganya);
+                        }
+                        else if (input_menu == 9)
+                        {
+                            menu = " Ice Cream Roll";
+                            harga = harga + harga_menu[8] * jumlah;
+                            harganya= harga_menu[8] * jumlah;
+                 System.out.println("Menu Pesanan Anda : " + menu +"    x"+ jumlah+"   |  Rp. "+ harganya);
+                        }
+                        else if (input_menu == 10)
+                        {
+                            menu = " Puding Vanilla";
+                            harga = harga + harga_menu[9] * jumlah;
+                            harganya= harga_menu[9] * jumlah;
+                 System.out.println("Menu Pesanan Anda : " + menu +"    x"+ jumlah+"   |  Rp. "+ harganya);
+                        }
+                     else
+                    {
+                        System.out.println("Maaf Menu Yang Anda Pilih Tidak Tersedia.");
+                    }
+
+            System.out.println("Apakah anda mau memesan lagi? Y/T");
+            i = scan.next();
+
+        }
+        System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+        System.out.println("Total pembayaran Rp." +harga+".");
+        System.out.println("Nominal Uang");
+        uang = scan.nextInt();
+        System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+        int kembalian = uang-harga;
+        System.out.println("Nominal Kembalian Rp." +kembalian+".");
+        System.out.println("Terimakasih atas kunjungannya Anda");
+     
+                 break;
+
+             case 2:
+                 System.out.println("Hello Admin! Semangat Bekerja");
+                 System.out.println("Mau Melakukan apa kali ini?");
+                 System.out.println("1. Menampilkan Daftar menu");
+                 System.out.println("2. Tambah Data Menu");
+                 System.out.println("3. Menghapus Menu");
+                 System.out.println("4. Mengurangi Jumlah Barang");
+                 System.out.println("Pilih = ");
+                 int user2 = scan.nextInt();
+                 switch(user2){
+                     case 1 :
+                 System.out.println(".            DAFTAR MENU               ");
+                 System.out.println("Selamat Datang, Mau Pesan Apa Hari Ini?");
+                 System.out.println("                                       ");
+                 System.out.println("                                       ");
+                 System.out.println("1. Coffee Latte................Rp 10000");
+                 System.out.println("2. Croissant....................Rp 5000");
+                 System.out.println("3. Vanilla Ice Cream............Rp 6000");
+                 System.out.println("4. Ice Cream w. Jasmine Tea....Rp 13000");
+                 System.out.println("5. Pudding Coklat...............Rp 5000");
+ 		 System.out.println("6. Americano....................Rp 8000");
+                 System.out.println("7. Brownies.....................Rp 7000");
+                 System.out.println("8. Chocolate Ice Cream..........Rp 6000");
+                 System.out.println("9. Ice Cream Rol...............Rp 13000");
+                 System.out.println("10. Pudding Vanilla.............Rp 5000");
+                 System.out.println("                                       ");
+                   break;
+                      case 2 :
+        System.out.println("Masukkan nama barang : ");
+        Barang[Jumlah] = scan.next();
+        int index = -1;
+        for (int i = 0; i < Barang.length; i++) {
+            if (Barang[i].equals(Kode)) {
+            index = i;
+            break;
+            }
+        }
+        if (index != -1) {
+        String[] newBarang = new String[Barang.length - 1];
+            for (int i = 0, j = 0; i < Barang.length; i++) {
+                if (i == index) {
+                continue;
+            }
+        newBarang[j++] = Barang[i];
+        }
+        Barang = newBarang;
+        }
+        System.out.println("Barang yang tersedia kini: " + Arrays.toString(Barang));
+                 break;                        
+
+                       case 3 :
+                 System.out.println("Masukkan Nama Barang yang Ingin Dihapus");
+                 String brg = scan.next();
+                 //Pencarian Data
+                 boolean ketemu = false;
+                 int idxKetemu = -1;
+                 for (int i = 0; i< Jumlah; i++) {
+                 if(Barang[i].compareToIgnoreCase(brg)==0) {
+                 ketemu = true;
+                 idxKetemu = i;
+                 break;
+                  }
+                  }
+                 if(ketemu==false) {
+                 System.out.println("Penghapusan Data Sukses");                             
+                  }else{
+                 //mengubah isi data array
+                 for (int i = idxKetemu; i< Jumlah-1; i++) {
+                 Barang[i] = Barang[i+1];
+                 Kode[i] = Kode[i+1];
+                 Harga[i] = Harga[i+1];
+                   }
+                 System.out.println("Penghapusan Data Suskess");
+                 Jumlah--;
+                            }
+                 System.out.println(" ");
+                 break;                
+                       case 4:
+                 System.out.println("Masukkan Nama Barang yang Ingin Dihapus");
+                 String barang = scan.next();
+                 //Pencarian Data
+                 boolean ketemu2 = false;
+                 int idxKetemu2 = -1;
+                 for (int i = 0; i< Jumlah; i++) {
+                 if(Barang[i].compareToIgnoreCase(barang)==0) {
+                 ketemu2 = true;
+                 idxKetemu = i;
+                 break;
+                  }
+                  }
+                 System.out.println("Masukkan jumlah yang ingin dikurangi");
+                 String jumlah = scan.next();
+                 if(ketemu2==false) {
+                 System.out.println("Pengurangan Data Sukses");                             
+
+                  break; 
+                 }
+                 }
+                 
+             case 3:
+                 System.out.println("Hello Owner! Butuh laporan apa kali ini?");
+                 System.out.println("1. Laporan Pembelian");
+                 System.out.println("2. Produk terlaris");
+                 System.out.println("Pilih = ");
+                 int user3 = scan.nextInt();
+                 switch(user3){
+                     case 1 :
+                            Date date = new Date();
+                            System.out.println("                  Laporan Penjualan                  ");
+                            System.out.println("No.\tTanggal\t\t\t\tBarang\t\tHarga\tBanyak Item\tTotal");
+             {
+                 int idx = 0;
+                 for (int i = 0; i < idx; i++) {
+             
+                     String[] banyakItem = null;
+                     String[] total = null;
+                     System.out.println((i + 1) + "." + "\t" + date.toString() + "\t" + Barang[i] + Harga[i] + "\t" + banyakItem[i] + "\t" + total[i]);
+                 }
+             }
+                            System.out.println(".....................................................");
+             {
+                 String GrandTotal = null;
+                 System.out.println("Total Penjualan = " + GrandTotal);
+             }
+                            System.out.println(".....................................................");
+                            break;
+                                                   case 2:
+                            //5 produk terlaris
+                            System.out.println("Daftar Menu Terfavorit : ");
+                            for (int i = 0; i < 10; i++) {
+                                for (int j = i + 1; j < 10; j++) {
+                                    boolean[] banyakItem = null;
+                                        //if (banyakItem [i] < banyakItem[j]){
+                                        boolean temp = banyakItem[j];
+                                        banyakItem[j] = banyakItem[i];
+                                        banyakItem[i] = temp;
+                                        String[] produk = null;
+                                        String p = produk[j];
+                                        produk[j] = produk[i];
+                                        produk[i] = p;
+                                    }
+                                }
+                            }
+                            System.out.println("No. Produk\tJumlah Pembelian");
+                            for (int i = 0; i < 5; i++){
+             boolean[] banyakItem = null;
+             String[] produk = null;
+                                System.out.println((i+1)+". "+produk[i]+"\t"+banyakItem[i]);
+                            }
+                            break;
+                        case 4:
+                            System.out.println("Krmbali ke HomePage");
+                            break;
+
+
+
+    
+                 }
+                 System.out.println ("Terima kasih..");
+ 
+
+     }while(user!=4);
+ }
+
+}
